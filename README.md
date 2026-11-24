@@ -1,4 +1,4 @@
-# TEER Lab v0.1.0
+# TEER Lab v0.2.0
 
 Interactive 3D educational simulator for transcatheter edge-to-edge repair.
 
@@ -16,6 +16,13 @@ Open `index.html` in a modern browser. No installation, build, server or externa
 
 ## Test
 Run `node test.cjs`. This checks the JavaScript syntax and numerical model invariants, not anatomical or clinical accuracy.
+
+## v0.2.0
+- Fixed viewport layout: 3D or TEE above a persistent control panel; the main screen does not scroll.
+- Tap a category and an operation to reveal one slider at a time. State persists when switching views or categories.
+- One selectable TEE plane at a time, fitted to the available canvas.
+- Reduced decoration, compact metrics, and model information behind the help button.
+- Responsive checks at 1280×720, 390×844, 390×667 and 844×390, including the display controls staying within the viewport.
 
 ## v0.1.0
 - Initial standalone port of the conversation prototype.
