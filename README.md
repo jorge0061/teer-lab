@@ -5,7 +5,7 @@ Interactive 3D educational simulator for transcatheter edge-to-edge repair.
 Unofficial educational geometry prototype. Not for clinical use or a substitute for supervised device training. No patient data. No affiliation with Abbott.
 
 ## Run
-Open `index.html` in a modern browser. No installation, build, server or external dependencies are required. WebGL is preferred; Canvas is the fallback. Browser rendering has not been independently verified.
+Open `index.html` in a modern browser. No installation, build, server or external dependencies are required. WebGL is preferred; Canvas is the fallback. Basic browser rendering and interactions have been smoke-tested; this does not establish clinical accuracy.
 
 ## Repository and deployment
 - Repository: https://github.com/jorge0061/teer-lab
@@ -27,6 +27,11 @@ Run `node test.cjs`. This checks the JavaScript syntax and numerical model invar
 - [SlicerHeart ValveClipDeviceSimulator](https://github.com/SlicerHeart/SlicerHeart/blob/master/ValveClipDeviceSimulator/ValveClipDevices/devices.py) (BSD-3-Clause)
 - [Simulation of Delivery of Clip-based Therapies within Multimodality Images](https://pmc.ncbi.nlm.nih.gov/articles/PMC8492527/)
 - [Advanced Steering Maneuvers](https://pmc.ncbi.nlm.nih.gov/articles/PMC11588182/)
+
+## Verification
+- Numerical checks: `node test.cjs` passed, including 243 sampled configurations.
+- Browser smoke check: WebGL view and geometric TEE slices render; System Push/Pull, independent G1 gripper, Transseptal mode and Reset respond. No console errors were observed during this check.
+- These checks do not validate clinical behavior or all devices/browsers.
 
 ## Limitations / next steps
 Anatomy and TEE projection are schematic. Steering signs, curvature, dimensions, friction, straddle exposure and grasping behavior require validation by experienced operators and reference data. The push/pull model does not simulate contact, constraints or secondary motion. No clinical validation. A distribution license for this project has not yet been selected.
